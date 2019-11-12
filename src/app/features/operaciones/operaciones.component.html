@@ -1,0 +1,40 @@
+<app-navegacion></app-navegacion>
+<h4   >Listado de Operaciones</h4>
+<br/>
+<button type="button" class="btn btn-success mb-2"
+(click)="crearCalculo()">
+  <i class="fas fa-plus">Crear</i>
+</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Operando Uno</th>
+      <th scope="col">Operando Dos</th>
+      <th scope="col">Resultado</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let item of calculos">
+            <th scope="row">{{item.idOperacion}}</th>
+            <td>{{item.nombre}}</td>
+            <td>{{item.operandoUno}}</td>
+            <td>{{item.operandoDos}}</td>
+            <td>{{item.resultado}}</td>
+        <td>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info"
+                >
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button type="button" class="btn btn-danger"
+                (click)="deleteCalculo(item.idOperacion)">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </td>
+        </tr>
+    </tbody>
+</table>

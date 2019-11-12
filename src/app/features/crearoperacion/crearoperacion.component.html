@@ -1,0 +1,39 @@
+<app-navegacion></app-navegacion>
+<h3>Crear Operacion</h3>
+<br />
+<form>
+    <div class="form-group">
+        <label for="operandoUno"> Operando Uno</label>
+        <input name="operandoUno" type="text" class="form-control" id="operandoUno" [(ngModel)]="operandoUno">
+    </div>
+
+    <div class="form-group">
+        <label for="operandoDos"> Operando Dos</label>
+        <input name="operandoDos" type="text" class="form-control" id="operandoDos" [(ngModel)]="operandoDos">
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-primary" (click)="sumar()">Suma</button>
+    <button type="submit" class="btn btn-primary" (click)="restar()">Resta</button>
+    <button type="submit" class="btn btn-primary" (click)="multiplicar()">Multiplicacion</button>
+    <button type="submit" class="btn btn-primary" (click)="dividir()">Divicion</button>
+    <button type="submit" class="btn btn-primary" (click)="raiz()">Raiz Cuadrada</button>
+    <button type="submit" class="btn btn-primary" (click)="exponencial()">Exponencial</button>
+
+    <br />
+
+
+    <div class="form-group">
+        <br />
+        <label for="resultado"> Resultado</label>
+        <input name="resultado" type="text" class="form-control" id="resultado" [(ngModel)]="resultado">
+    </div>
+
+    <div class="form-group">
+        <br />
+        <button type="submit" class="btn btn-primary" (click)="createOperacion()">Guardar</button>
+        <button type="submit" class="btn btn-light" (click)="cancelar()">Cancel</button>
+    </div>
+
+</form>
